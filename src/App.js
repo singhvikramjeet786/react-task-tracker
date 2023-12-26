@@ -1,3 +1,4 @@
+import AddTask from './components/AddTask.js';
 import Header from './components/Header.js';
 import Tasks from './components/Tasks.js';
 import { useState } from "react"
@@ -31,6 +32,14 @@ function App() {
     }
   ]);
   
+  //Add task
+  const addTask= (task) =>{
+    console.log(task)
+    const id = Math.floor(Math.random() * 10000) +1
+
+    const newTask = {id, ...task}
+    setTasks([...taskList, newTask])
+  }
   //delete Task function
   const deleteTask = (id) =>{
     console.log('Delete',id);
@@ -47,6 +56,7 @@ function App() {
   return (
     <div className="container">
       <Header title="Task Tracker" />
+      <AddTask onAdd={addTask}/>
       {taskList.length > 0 ? (<Tasks tasks={taskList} onDelete={deleteTask} onToggle={toggleReminder}/>
       ) : (<p>No Tasks to Show</p>
     )}
