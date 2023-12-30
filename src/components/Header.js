@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types'
 import Button from './Button'
+import {FaTimes} from 'react-icons/fa';
 
-const Header = ({ title }) => {
+const Header = ({ title, onAdd,showAdd}) => {
 
-  const onClick = (e) => {
-    console.log("I'm Clicked");
-  }
+  // const onClick = (e) => {
+  //   console.log("I'm Clicked");
+  // }
 
   return (
     <header className="header">
       {/* CSS in JS */}
       {/* <h1 style={headingStyle}>{title}</h1> */}
       <h1 >{title}</h1>
-      <Button color='green' text='Add' onClick={onClick} />
+      <Button color={showAdd ? 'red' :'green'} text={showAdd ? 'Close' : 'Add'} onClick={onAdd} />
     </header>
   )
 }
@@ -26,6 +27,6 @@ Header.propTypes = {
 }
 
 //CSS in js
-const headingStyle = { color: 'yellow', backgroundColor: 'lightgreen' };
+//const headingStyle = { color: 'yellow', backgroundColor: 'lightgreen' };
 
 export default Header
