@@ -1,19 +1,28 @@
 {
-  "posts": [
+  "tasks": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "text": "Buy Furnitures",
+      "day": "Dec 28th at 11am",
+      "reminder": true
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "text": "Meeting at School",
+      "day": "Jan 28th at 9am",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "text": "Food Shopping",
+      "day": "Dec 30th at 1pm",
+      "reminder": false
+    },
+    {
+      "id": 4,
+      "text": "House Cleaning",
+      "day": "Jan 3th at 3pm",
+      "reminder": false
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
