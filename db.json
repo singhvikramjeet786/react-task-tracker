@@ -10,19 +10,19 @@
       "id": 2,
       "text": "Meeting at School",
       "day": "Jan 28th at 9am",
-      "reminder": true
-    },
-    {
-      "id": 3,
-      "text": "Food Shopping",
-      "day": "Dec 30th at 1pm",
       "reminder": false
     },
     {
-      "id": 4,
       "text": "House Cleaning",
-      "day": "Jan 3th at 3pm",
-      "reminder": false
+      "day": "Every Weekend",
+      "reminder": false,
+      "id": 3
+    },
+    {
+      "text": "transport Furniture",
+      "day": "Jan 2nd at 3pm",
+      "reminder": true,
+      "id": 4
     }
   ]
 }
