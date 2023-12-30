@@ -92,14 +92,14 @@ function App() {
         <Header title="Task Tracker" showAdd={showAddTask} onAdd={() => setShowAddTask(!showAddTask)} />
 
         <Routes>
-          <Route path='/' exact render={(props) => (
+          <Route path='/' exact element={
             <>
               {showAddTask && <AddTask onAdd={addTask} />}
               {taskList.length > 0 ? (<Tasks tasks={taskList} onDelete={deleteTask} onToggle={toggleReminder} />
               ) : (<p>No Tasks to Show</p>
               )}
             </>
-          )} />
+          } />
           <Route path='/about' Component={About} />
         </Routes>
         <Footer />
